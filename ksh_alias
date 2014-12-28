@@ -1,0 +1,49 @@
+#
+###############################################################################
+#                                                                             #
+# Copyright (c) 2014 Thomas Dwyer. All rights reserved.                       #
+#                                                                             #
+# Redistribution and use in source and binary forms, with or without          #
+# modification, are permitted provided that the following conditions          #
+# are met:                                                                    #
+# 1. Redistributions of source code must retain the above copyright           #
+#    notice, this list of conditions and the following disclaimer.            #
+# 2. Redistributions in binary form must reproduce the above copyright        #
+#    notice, this list of conditions and the following disclaimer in the      #
+#    documentation and/or other materials provided with the distribution.     #
+#                                                                             #
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR        #
+# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES   #
+# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.     #
+# IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,            #
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT    #
+# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,   #
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY       #
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT         #
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF    #
+# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.           #
+#                                                                             #
+###############################################################################
+#
+
+alias ls="colorls -G"
+alias l="ls -lh"
+alias la="ls -lha"
+alias e="exit"
+alias netr="netstat -rnf inet"
+alias netp="netstat -anf inet"
+alias c="clear"
+alias wanip='curl --get http://tnx.nl/ip'
+alias myterm='clear ;tput longname cols lines ;echo $TERM ;echo $SHELL ;/usr/site/bin/256colors2.pl'
+alias test256="/usr/site/bin/256colors2.pl"
+alias daemon.log='/usr/local/bin/colortail -k  /usr/local/share/examples/colortail/conf.daemon -f /var/log/daemon'
+alias messages.log='/usr/local/bin/colortail -k  /usr/local/share/examples/colortail/conf.messages -f /var/log/messages'
+alias secure.log='/usr/local/bin/colortail -k  /usr/local/share/examples/colortail/conf.secure -f /var/log/secure'
+alias authlog.log='/usr/local/bin/colortail -k  /usr/local/share/examples/colortail/conf.authlog -f /var/log/authlog'
+alias xferlog.log='/usr/local/bin/colortail -k  /usr/local/share/examples/colortail/conf.xferlog -f /var/log/xferlog'
+alias vimpf="/usr/local/bin/vim /etc/pf.conf ;/sbin/pfctl -vf /etc/pf.conf"
+alias kshrc=". ~/.kshrc"
+alias xclip="/usr/local/bin/xclip -selection clipboard "
+alias allbin="/usrlocal/bin/gawk 'BEGIN{_path=ENVIRON[\"PATH\"]; gsub(/:/,\",\",_path); gsub(/\,.$/,\"\",_path); printf \"%s%s%s\", \"{\", _path, \"}\" }'"
+alias gpg="/usr/local/bin/gpg2"
+alias randhex='printf "%x\n" "${RANDOM}"'
